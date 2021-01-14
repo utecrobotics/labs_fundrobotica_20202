@@ -37,7 +37,7 @@ def dh(d, theta, a, alpha):
     cth = np.cos(theta)
     sa  = np.sin(alpha)
     ca  = np.cos(alpha)
-    T = np.matrix([[cth, -ca*sth,  sa*sth, a*cth],
+    T = np.array([[cth, -ca*sth,  sa*sth, a*cth],
                    [sth,  ca*cth, -sa*cth, a*sth],
                    [0.0,      sa,      ca,     d],
                    [0.0,     0.0,     0.0,   1.0]])
