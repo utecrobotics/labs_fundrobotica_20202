@@ -16,7 +16,7 @@ def dh(d, theta, a, alpha):
     
     
 
-def fkine_u5(q):
+def fkine_ur5(q):
     """
     Calcular la cinematica directa del robot UR5 dados sus valores articulares. 
     q es un vector numpy de la forma [q1, q2, q3, q4, q5, q6]
