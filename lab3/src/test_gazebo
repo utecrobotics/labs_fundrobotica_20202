@@ -30,14 +30,14 @@ if __name__ == '__main__':
     robot_client.wait_for_result()
     rospy.sleep(1)
     
-    rate = rospy.Rate(100)
+    rate = rospy.Rate(10)
     while not rospy.is_shutdown():
         robot_client.cancel_goal()
 
         # Modification of the motion
         Q0[0] = Q0[0]-0.005
 
-        g.trajectory.points = [ JointTrajectoryPoint(positions=Q0, velocities=[0]*6, time_from_start=rospy.Duration(0.008))]
+        g.trajectory.points = [ JointTrajectoryPoint(positions=Q0, velocities=[0]*6, time_from_start=rospy.Duration(0.01))]
         robot_client.send_goal(g)
         robot_client.wait_for_result()
 
